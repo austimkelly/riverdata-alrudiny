@@ -25,17 +25,16 @@ jobs:
           node-version: 18.x
           cache: npm
 
-      - name: Navigate to 'riverdata' folder
-        run: pwd && cd riverdata && pwd
-
       - name: Setup EAS
         uses: expo/expo-github-action@v8
         with:
           eas-version: latest
           token: ${{ secrets.EXPO_TOKEN }}
 
-      - name: Install dependencies
-        run: npm install
+      - name: Install dependencies in /rivedata folder
+        run: | 
+          pwd && cd riverdata && pwd
+          npm install
 
       - name: Create preview
         uses: expo/expo-github-action/preview@v8
