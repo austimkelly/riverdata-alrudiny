@@ -4,6 +4,11 @@
     "name": "riverdata",
     "slug": "riverdata",
     "version": "1.0.0",
+    "jsEngine": "hermes",
+    "ios": {
+      "jsEngine": "jsc"
+      }
+    },
     "assetBundlePatterns": [
       "**/*"
     ],
